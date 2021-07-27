@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import styles from '@styles/components/layout.module.scss'
 
-const Layout = ({ children, globalClass, companyName, siteTitle, siteDescription, mainCtaLabel, mainCtaHref }) => {
+const Layout = ({ children, globalClass, companyName, siteTitle, siteDescription, mainCtaLabel, mainCtaHref, footerCtaSub, footerCtaHeadline, appStoreUrl, appStoreImgSrc, appStoreImgAlt, facebookImgSrc, facebookImgAlt, instagramImgSrc, instagramImgAlt, twitterImgSrc, twitterImgAlt, linkedInImgSrc, linkedInImgAlt, youTubeImgSrc, youTubeImgAlt }) => {
 
   return (
     <div className={globalClass}>
@@ -22,7 +22,24 @@ const Layout = ({ children, globalClass, companyName, siteTitle, siteDescription
       <main>
         {children}
       </main>
-      <Footer companyName={companyName} />
+      <Footer
+        companyName={companyName}
+        footerCtaSub={footerCtaSub}
+        footerCtaHeadline={footerCtaHeadline}
+        appStoreUrl={appStoreUrl}
+        appStoreImgSrc={appStoreImgSrc}
+        appStoreImgAlt={appStoreImgAlt}
+        facebookImgSrc={facebookImgSrc}
+        facebookImgAlt={facebookImgAlt}
+        instagramImgSrc={instagramImgSrc}
+        instagramImgAlt={instagramImgAlt}
+        twitterImgSrc={twitterImgSrc}
+        twitterImgAlt={twitterImgAlt}
+        linkedInImgSrc={linkedInImgSrc}
+        linkedInImgAlt={linkedInImgAlt}
+        youTubeImgSrc={youTubeImgSrc}
+        youTubeImgAlt={youTubeImgAlt}
+      />
     </div>
   )
 }
@@ -82,14 +99,14 @@ const Nav = ({ mainCtaLabel, mainCtaHref }) => {
   )
 }
 
-const Footer = ({ companyName }) => {
+const Footer = ({ companyName, footerCtaSub, footerCtaHeadline, appStoreUrl, appStoreImgSrc, appStoreImgAlt, facebookImgSrc, facebookImgAlt, instagramImgSrc, instagramImgAlt, twitterImgSrc, twitterImgAlt, linkedInImgSrc, linkedInImgAlt, youTubeImgSrc, youTubeImgAlt }) => {
   return (
     <footer className={`wrapper ${styles.footer}`}>
       <div className={`container ${styles.ctaContainer}`}>
-        <a href='#'>
-          <h4>HomeBuyHome App</h4>
-          <h2>Download today</h2>
-          <img className={styles.appStoreBadge} src="/App_Store_Badge.svg" alt="App Store Badge" />
+        <h4>{footerCtaSub}</h4>
+        <h2>{footerCtaHeadline}</h2>
+        <a href={appStoreUrl} target='_blank'>
+          <img className={styles.appStoreBadge} src={appStoreImgSrc} alt={appStoreImgAlt} />
         </a>
       </div>
       <div className={`container ${styles.bottomContainer}`}>
@@ -103,23 +120,23 @@ const Footer = ({ companyName }) => {
         <div className={`col right ${styles.right}`}>
           <div className={`${styles.social}`}>
             <a href="#" target='_blank'>
-              <img className={styles.socialIcon} src='/Icon_Facebook_WhiteBg.png' alt='Facebook' />
+              <img className={styles.socialIcon} src={facebookImgSrc} alt={facebookImgAlt} />
             </a>
 
             <a href="#" target='_blank'>
-              <img className={styles.socialIcon} src='/Icon_Instagram_WhiteBg.png' alt='Instagram' />
+              <img className={styles.socialIcon} src={instagramImgSrc} alt={instagramImgAlt} />
             </a>
 
             <a href="#" target='_blank'>
-              <img className={styles.socialIcon} src='/Icon_Twitter_WhiteBg.png' alt='TWitter' />
+              <img className={styles.socialIcon} src={twitterImgSrc} alt={twitterImgAlt} />
             </a>
 
             <a href="#" target='_blank'>
-              <img className={styles.socialIcon} src='/Icon_LinkedIn_WhiteBg.png' alt='LinkedIn' />
+              <img className={styles.socialIcon} src={linkedInImgSrc} alt={linkedInImgAlt} />
             </a>
 
             <a href="#" target='_blank'>
-              <img className={styles.socialIcon} src='/Icon_YouTube_WhiteBg.png' alt='YouTube' />
+              <img className={styles.socialIcon} src={youTubeImgSrc} alt={youTubeImgAlt} />
             </a>
           </div>
         </div>
