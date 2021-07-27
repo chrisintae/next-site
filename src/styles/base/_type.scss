@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+
+h1 {
+  font-family: $ff-display;
+}
+h2,
+h3 {
+  font-family: $ff-serif;
+}
+h4 {
+  font-family: $ff-sans;
+  font-weight: 500;
+}
+p {
+  font-family: $ff-sans;
+  font-weight: 300;
+  line-height: 145%;
+}
+
+a {
+  font-family: $ff-sans;
+}
+
+button {
+  font-family: $ff-sans;
+  font-weight: 300;
+}
