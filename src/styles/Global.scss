@@ -1,0 +1,56 @@
+@use "abstracts/type";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $ff-sans;
+  font-size: 17px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// layout
+.app {
+  visibility: visible;
+}
+
+header,
+footer,
+main,
+section,
+.wrapper {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+
+  &.half {
+    height: 50vh;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 767.9px) {
+  span.mobile-block {
+    display: block;
+  }
+}
