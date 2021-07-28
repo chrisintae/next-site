@@ -3,9 +3,9 @@ $h-fs: 4rem;
 $p-fs: 28px;
 
 .hero {
-  height: 60vh;
+  height: 40vh;
   @include flex();
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background: $hero-bg;
   margin-top: 120px;
