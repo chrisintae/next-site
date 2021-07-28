@@ -54,3 +54,9 @@ section {
     display: block;
   }
 }
+
+.theme-black {
+  background: $black !important;
+  color: $white !important;
+  font-weight: 300 !important;
+}
