@@ -1,6 +1,7 @@
-import Hero from '@comps/Hero'
 import Layout from '@comps/layout'
+import Hero from '@comps/Hero'
 import TwoColumn from '@comps/TwoColumn'
+import Phone from '@comps/Phone'
 
 export default function Home() {
   return (
@@ -34,6 +35,8 @@ export default function Home() {
         appStoreImgSrc='/Badge_AppStore.svg'
         appStoreImgAlt='App Store Badge'
       />
+
+      <Phone />
 
       <TwoColumn
         subhead='Step 1'

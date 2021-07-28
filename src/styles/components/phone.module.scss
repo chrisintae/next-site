@@ -1,0 +1,12 @@
+.phoneContainer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 100px;
+
+  .phone {
+    width: 40vw;
+    max-width: 600px;
+    height: auto;
+  }
+}
